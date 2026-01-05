@@ -1,0 +1,10 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="32" fill="#15141b"/>
+
+  <!-- Letter 'A' in Aura purple -->
+  <path d="M32 16L20 46H26L28 40H36L38 46H44L32 16ZM29.5 35L32 26L34.5 35H29.5Z" fill="#a277ff"/>
+
+  <!-- Accent dot -->
+  <circle cx="32" cy="14" r="2" fill="#61ffca"/>
+</svg>
