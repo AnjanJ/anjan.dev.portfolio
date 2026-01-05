@@ -475,8 +475,20 @@ select:focus-visible {
 }
 
 @media (max-width: 768px) {
+  .nav-content {
+    position: relative;
+  }
+
   .mobile-menu-toggle {
     display: flex;
+    order: -1;
+    margin-right: auto;
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .nav-links {
@@ -494,6 +506,7 @@ select:focus-visible {
     opacity: 0;
     visibility: hidden;
     transition: all var(--transition-normal);
+    z-index: 99;
   }
 
   .nav-links.active {
