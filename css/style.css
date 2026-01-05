@@ -443,7 +443,8 @@ select:focus-visible {
   border: none;
   cursor: pointer;
   padding: 8px;
-  z-index: 101;
+  z-index: 1001;
+  position: relative;
 }
 
 .hamburger-line {
