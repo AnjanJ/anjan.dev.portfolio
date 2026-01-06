@@ -436,12 +436,12 @@ select:focus-visible {
 
 /* Nav Theme Toggle (Mobile only) */
 .nav-theme-toggle {
-  display: none;
+  display: none !important;
 }
 
 @media (max-width: 768px) {
   .nav-theme-toggle {
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
