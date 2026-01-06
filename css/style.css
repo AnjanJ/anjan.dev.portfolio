@@ -434,6 +434,51 @@ select:focus-visible {
   box-shadow: 0 0 0 6px rgba(162, 119, 255, 0.25);
 }
 
+/* Nav Theme Toggle (Mobile only) */
+.nav-theme-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: var(--space-md) var(--space-xl);
+    padding: 0.5rem 1rem;
+    background: var(--accent-secondary);
+    color: var(--aura-black);
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: var(--font-sans);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+
+  .nav-theme-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(97, 255, 202, 0.3);
+  }
+
+  .nav-theme-toggle .theme-icon {
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+
+  /* When in light mode, show dark mode colors */
+  [data-theme="light"] .nav-theme-toggle {
+    background: var(--aura-purple);
+    color: var(--aura-white);
+  }
+
+  [data-theme="light"] .nav-theme-toggle:hover {
+    box-shadow: 0 4px 12px rgba(162, 119, 255, 0.3);
+  }
+}
+
 /* Mobile Menu Toggle */
 .mobile-menu-toggle {
   display: none;
