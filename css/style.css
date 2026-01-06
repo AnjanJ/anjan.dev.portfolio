@@ -476,29 +476,21 @@ select:focus-visible {
 
 @media (max-width: 768px) {
   .nav-content {
-    display: grid;
-    grid-template-columns: 1fr auto auto;
-    gap: var(--space-md);
+    display: flex;
+    justify-content: space-between;
     align-items: center;
   }
 
   .logo {
-    grid-column: 1;
+    flex: 0 0 auto;
   }
 
   .theme-toggle {
-    position: static !important;
-    grid-column: 2;
-    width: 2.5rem !important;
-    height: 2.5rem !important;
-    margin: 0 !important;
-    top: auto !important;
-    right: auto !important;
+    display: none;
   }
 
   .mobile-menu-toggle {
     display: flex;
-    grid-column: 3;
   }
 
   .nav-links {
