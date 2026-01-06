@@ -687,25 +687,27 @@ select:focus-visible {
 }
 
 .status-dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   background: var(--status-success);
+  border-radius: 50%;
   position: relative;
   transition: all 0.3s ease;
   animation: pulse 2s ease-in-out infinite;
 }
 
-/* Default dot shape */
+/* Default dot shape - hidden pseudo elements */
 .status-dot::before,
 .status-dot::after {
   content: '';
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   background: var(--status-success);
   border-radius: 50%;
   transition: all 0.3s ease;
   opacity: 0;
+  pointer-events: none;
 }
 
 @keyframes pulse {
@@ -719,24 +721,26 @@ select:focus-visible {
 
 /* Transform into heart on hover */
 .hero-badge:hover .status-dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   background: var(--status-success);
   transform: rotate(-45deg);
-  border-radius: 0;
+  border-radius: 0 0 0 0;
   animation: heartbeat 0.8s ease-in-out infinite;
 }
 
 .hero-badge:hover .status-dot::before {
   opacity: 1;
-  top: -5px;
+  top: -4px;
   left: 0;
+  border-radius: 50%;
 }
 
 .hero-badge:hover .status-dot::after {
   opacity: 1;
-  left: 5px;
+  left: 4px;
   top: 0;
+  border-radius: 50%;
 }
 
 @keyframes heartbeat {
@@ -1151,7 +1155,7 @@ section {
   border-radius: 50%;
   transition: all 0.3s ease;
   opacity: 0;
-  border: 3px solid var(--bg-primary);
+  pointer-events: none;
 }
 
 .timeline-content {
@@ -1173,7 +1177,7 @@ section {
   left: -2.5rem;
   top: 0.5rem;
   transform: rotate(-45deg);
-  border-radius: 0;
+  border-radius: 0 0 0 0;
   border: none;
   animation: timeline-heartbeat 0.8s ease-in-out infinite;
   box-shadow: 0 0 20px rgba(162, 119, 255, 0.4);
@@ -1183,12 +1187,14 @@ section {
   opacity: 1;
   top: -6px;
   left: 0;
+  border-radius: 50%;
 }
 
 .timeline-item:hover .timeline-marker::after {
   opacity: 1;
   left: 6px;
   top: 0;
+  border-radius: 50%;
 }
 
 @keyframes timeline-heartbeat {
