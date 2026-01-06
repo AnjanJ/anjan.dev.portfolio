@@ -690,6 +690,8 @@ select:focus-visible {
   border-radius: 50%;
   background: var(--status-success);
   animation: pulse 2s ease-in-out infinite;
+  position: relative;
+  transition: all 0.3s ease;
 }
 
 @keyframes pulse {
@@ -698,6 +700,37 @@ select:focus-visible {
   }
   50% {
     opacity: 0.5;
+  }
+}
+
+/* Heart shape on hover */
+.hero-badge:hover .status-dot {
+  background: transparent;
+  animation: heartbeat 0.8s ease-in-out infinite;
+}
+
+.hero-badge:hover .status-dot::before {
+  content: '❤️';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  line-height: 1;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.15);
   }
 }
 
