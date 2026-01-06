@@ -2134,17 +2134,7 @@ section {
 
 .legend-dot.skill-advanced::before,
 .legend-dot.skill-advanced::after {
-  width: 10px;
-  height: 10px;
-  background: var(--accent-secondary);
-}
-
-.legend-dot.skill-advanced::before {
-  animation: legend-heart-top-medium 3.5s ease-in-out infinite 0.3s;
-}
-
-.legend-dot.skill-advanced::after {
-  animation: legend-heart-right-medium 3.5s ease-in-out infinite 0.3s;
+  display: none;
 }
 
 /* Intermediate - Small (8px) */
