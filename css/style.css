@@ -447,6 +447,10 @@ select:focus-visible {
   position: relative;
 }
 
+.mobile-theme-toggle {
+  display: none;
+}
+
 .hamburger-line {
   width: 24px;
   height: 2px;
@@ -493,13 +497,31 @@ select:focus-visible {
   }
 
   .theme-toggle {
-    position: static !important;
-    order: 3;
-    width: 2.5rem;
-    height: 2.5rem;
-    margin-left: var(--space-md);
-    top: auto !important;
-    right: auto !important;
+    display: none !important;
+  }
+
+  .mobile-theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-md) var(--space-xl);
+    background: transparent;
+    border: none;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    transition: background var(--transition-fast);
+  }
+
+  .mobile-theme-toggle:hover {
+    background: var(--bg-elevated);
+  }
+
+  .theme-icon {
+    font-size: 1.25rem;
   }
 
   .nav-links {
