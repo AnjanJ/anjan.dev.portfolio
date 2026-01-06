@@ -2107,7 +2107,6 @@ section {
   width: 12px;
   height: 12px;
   background: var(--accent-primary);
-  animation-delay: 0s;
 }
 
 .legend-dot.skill-expert::before,
@@ -2130,7 +2129,7 @@ section {
   width: 10px;
   height: 10px;
   background: var(--accent-secondary);
-  animation: legend-heartbeat-no-rotate 3.5s ease-in-out infinite 0.3s;
+  animation: legend-heartbeat-no-rotate 3.5s ease-in-out infinite;
 }
 
 .legend-dot.skill-advanced::before,
@@ -2141,11 +2140,11 @@ section {
 }
 
 .legend-dot.skill-advanced::before {
-  animation: legend-heart-top-medium 3.5s ease-in-out infinite 0.3s;
+  animation: legend-heart-top-medium 3.5s ease-in-out infinite;
 }
 
 .legend-dot.skill-advanced::after {
-  animation: legend-heart-right-medium 3.5s ease-in-out infinite 0.3s;
+  animation: legend-heart-right-medium 3.5s ease-in-out infinite;
 }
 
 /* Intermediate - Small (8px) */
@@ -2153,7 +2152,7 @@ section {
   width: 8px;
   height: 8px;
   background: var(--aura-orange);
-  animation: legend-heartbeat-counter 3.5s ease-in-out infinite 0.6s;
+  animation: legend-heartbeat-counter 3.5s ease-in-out infinite;
 }
 
 .legend-dot.skill-intermediate::before,
@@ -2164,11 +2163,11 @@ section {
 }
 
 .legend-dot.skill-intermediate::before {
-  animation: legend-heart-top-small 3.5s ease-in-out infinite 0.6s;
+  animation: legend-heart-top-small 3.5s ease-in-out infinite;
 }
 
 .legend-dot.skill-intermediate::after {
-  animation: legend-heart-right-small 3.5s ease-in-out infinite 0.6s;
+  animation: legend-heart-right-small 3.5s ease-in-out infinite;
 }
 
 /* Heart animation - Expert (clockwise rotation) */
