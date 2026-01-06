@@ -685,13 +685,25 @@ select:focus-visible {
 }
 
 .status-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
+  width: 10px;
+  height: 10px;
   background: var(--status-success);
-  animation: pulse 2s ease-in-out infinite;
   position: relative;
   transition: all 0.3s ease;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Default dot shape */
+.status-dot::before,
+.status-dot::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--status-success);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  opacity: 0;
 }
 
 @keyframes pulse {
@@ -703,34 +715,40 @@ select:focus-visible {
   }
 }
 
-/* Heart shape on hover */
+/* Transform into heart on hover */
 .hero-badge:hover .status-dot {
-  background: transparent;
+  width: 10px;
+  height: 10px;
+  background: var(--status-success);
+  transform: rotate(-45deg);
+  border-radius: 0;
   animation: heartbeat 0.8s ease-in-out infinite;
 }
 
 .hero-badge:hover .status-dot::before {
-  content: '❤️';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 14px;
-  line-height: 1;
+  opacity: 1;
+  top: -5px;
+  left: 0;
+}
+
+.hero-badge:hover .status-dot::after {
+  opacity: 1;
+  left: 5px;
+  top: 0;
 }
 
 @keyframes heartbeat {
   0%, 100% {
-    transform: scale(1);
+    transform: rotate(-45deg) scale(1);
   }
   25% {
-    transform: scale(1.2);
+    transform: rotate(-45deg) scale(1.2);
   }
   50% {
-    transform: scale(1);
+    transform: rotate(-45deg) scale(1);
   }
   75% {
-    transform: scale(1.15);
+    transform: rotate(-45deg) scale(1.15);
   }
 }
 
