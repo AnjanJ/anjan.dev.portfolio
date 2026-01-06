@@ -349,6 +349,7 @@ select:focus-visible {
   align-items: center;
   justify-content: space-between;
   padding: var(--space-lg) 0;
+  padding-right: 4rem;
 }
 
 .logo {
@@ -419,7 +420,8 @@ select:focus-visible {
   border-radius: var(--radius-md);
   font-weight: 600;
   transition: all var(--transition-fast);
-  margin-right: var(--space-md);
+  margin-right: var(--space-xl);
+  white-space: nowrap;
 }
 
 .nav-resume:hover {
@@ -522,11 +524,28 @@ select:focus-visible {
   border-radius: var(--radius-md);
 }
 
+/* Medium screens - prevent overlap */
+@media (max-width: 1200px) and (min-width: 769px) {
+  .nav-content {
+    padding-right: 5rem;
+  }
+
+  .nav-resume {
+    margin-right: var(--space-2xl);
+  }
+
+  .nav-links {
+    gap: var(--space-md);
+  }
+}
+
+/* Mobile screens */
 @media (max-width: 768px) {
   .nav-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-right: 0;
   }
 
   .logo {
