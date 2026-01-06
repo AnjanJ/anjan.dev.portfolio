@@ -444,7 +444,7 @@ select:focus-visible {
   display: none !important;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .nav-theme-toggle {
     display: flex !important;
     align-items: center;
@@ -525,7 +525,7 @@ select:focus-visible {
 }
 
 /* Medium screens - prevent overlap */
-@media (max-width: 1200px) and (min-width: 769px) {
+@media (max-width: 1200px) and (min-width: 1025px) {
   .nav-content {
     padding-right: 5rem;
   }
@@ -539,8 +539,8 @@ select:focus-visible {
   }
 }
 
-/* Mobile screens */
-@media (max-width: 768px) {
+/* Mobile/Tablet screens - hamburger menu */
+@media (max-width: 1024px) {
   .nav-content {
     display: flex;
     justify-content: space-between;
@@ -600,6 +600,7 @@ select:focus-visible {
 
   .nav-resume {
     margin: var(--space-md) var(--space-xl);
+    margin-right: 0;
     text-align: center;
   }
 }
