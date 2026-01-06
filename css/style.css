@@ -493,11 +493,13 @@ select:focus-visible {
   }
 
   .theme-toggle {
-    position: static;
+    position: static !important;
     order: 3;
     width: 2.5rem;
     height: 2.5rem;
     margin-left: var(--space-md);
+    top: auto !important;
+    right: auto !important;
   }
 
   .nav-links {
