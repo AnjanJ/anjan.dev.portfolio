@@ -2087,22 +2087,226 @@ section {
 }
 
 .legend-dot {
-  width: 10px;
-  height: 10px;
   border-radius: 50%;
   flex-shrink: 0;
+  position: relative;
+  animation: legend-heartbeat 3.5s ease-in-out infinite;
 }
 
+.legend-dot::before,
+.legend-dot::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Expert - Largest (12px) */
 .legend-dot.skill-expert {
+  width: 12px;
+  height: 12px;
+  background: var(--accent-primary);
+  animation-delay: 0s;
+}
+
+.legend-dot.skill-expert::before,
+.legend-dot.skill-expert::after {
+  width: 12px;
+  height: 12px;
   background: var(--accent-primary);
 }
 
+.legend-dot.skill-expert::before {
+  animation: legend-heart-top-large 3.5s ease-in-out infinite;
+}
+
+.legend-dot.skill-expert::after {
+  animation: legend-heart-right-large 3.5s ease-in-out infinite;
+}
+
+/* Advanced - Medium (10px) */
 .legend-dot.skill-advanced {
+  width: 10px;
+  height: 10px;
+  background: var(--accent-secondary);
+  animation-delay: 0.3s;
+}
+
+.legend-dot.skill-advanced::before,
+.legend-dot.skill-advanced::after {
+  width: 10px;
+  height: 10px;
   background: var(--accent-secondary);
 }
 
+.legend-dot.skill-advanced::before {
+  animation: legend-heart-top-medium 3.5s ease-in-out infinite 0.3s;
+}
+
+.legend-dot.skill-advanced::after {
+  animation: legend-heart-right-medium 3.5s ease-in-out infinite 0.3s;
+}
+
+/* Intermediate - Small (8px) */
 .legend-dot.skill-intermediate {
+  width: 8px;
+  height: 8px;
   background: var(--aura-orange);
+  animation-delay: 0.6s;
+}
+
+.legend-dot.skill-intermediate::before,
+.legend-dot.skill-intermediate::after {
+  width: 8px;
+  height: 8px;
+  background: var(--aura-orange);
+}
+
+.legend-dot.skill-intermediate::before {
+  animation: legend-heart-top-small 3.5s ease-in-out infinite 0.6s;
+}
+
+.legend-dot.skill-intermediate::after {
+  animation: legend-heart-right-small 3.5s ease-in-out infinite 0.6s;
+}
+
+/* Heart animation for legend dots */
+@keyframes legend-heartbeat {
+  0%, 30% {
+    transform: rotate(0deg) scale(1);
+    border-radius: 50%;
+  }
+  40% {
+    transform: rotate(-45deg) scale(1);
+    border-radius: 0;
+  }
+  50% {
+    transform: rotate(-45deg) scale(1.15);
+    border-radius: 0;
+  }
+  55% {
+    transform: rotate(-45deg) scale(1);
+    border-radius: 0;
+  }
+  60% {
+    transform: rotate(-45deg) scale(1.1);
+    border-radius: 0;
+  }
+  70%, 100% {
+    transform: rotate(0deg) scale(1);
+    border-radius: 50%;
+  }
+}
+
+/* Large (Expert - 12px) */
+@keyframes legend-heart-top-large {
+  0%, 30% {
+    opacity: 0;
+    top: 0;
+    left: 0;
+  }
+  40%, 70% {
+    opacity: 1;
+    top: -6px;
+    left: 0;
+  }
+  80%, 100% {
+    opacity: 0;
+    top: 0;
+    left: 0;
+  }
+}
+
+@keyframes legend-heart-right-large {
+  0%, 30% {
+    opacity: 0;
+    top: 0;
+    left: 0;
+  }
+  40%, 70% {
+    opacity: 1;
+    top: 0;
+    left: 6px;
+  }
+  80%, 100% {
+    opacity: 0;
+    top: 0;
+    left: 0;
+  }
+}
+
+/* Medium (Advanced - 10px) */
+@keyframes legend-heart-top-medium {
+  0%, 30% {
+    opacity: 0;
+    top: 0;
+    left: 0;
+  }
+  40%, 70% {
+    opacity: 1;
+    top: -5px;
+    left: 0;
+  }
+  80%, 100% {
+    opacity: 0;
+    top: 0;
+    left: 0;
+  }
+}
+
+@keyframes legend-heart-right-medium {
+  0%, 30% {
+    opacity: 0;
+    top: 0;
+    left: 0;
+  }
+  40%, 70% {
+    opacity: 1;
+    top: 0;
+    left: 5px;
+  }
+  80%, 100% {
+    opacity: 0;
+    top: 0;
+    left: 0;
+  }
+}
+
+/* Small (Intermediate - 8px) */
+@keyframes legend-heart-top-small {
+  0%, 30% {
+    opacity: 0;
+    top: 0;
+    left: 0;
+  }
+  40%, 70% {
+    opacity: 1;
+    top: -4px;
+    left: 0;
+  }
+  80%, 100% {
+    opacity: 0;
+    top: 0;
+    left: 0;
+  }
+}
+
+@keyframes legend-heart-right-small {
+  0%, 30% {
+    opacity: 0;
+    top: 0;
+    left: 0;
+  }
+  40%, 70% {
+    opacity: 1;
+    top: 0;
+    left: 4px;
+  }
+  80%, 100% {
+    opacity: 0;
+    top: 0;
+    left: 0;
+  }
 }
 
 /* ==========================================
