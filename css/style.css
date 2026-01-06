@@ -485,20 +485,19 @@ select:focus-visible {
   .mobile-menu-toggle {
     display: flex;
     flex-shrink: 0;
+    order: 2;
   }
 
   .logo {
-    flex: 1;
-    text-align: center;
-    margin: 0 auto;
-    max-width: calc(100% - 120px);
+    order: 1;
   }
 
   .theme-toggle {
-    top: 1.125rem;
-    right: 1rem;
-    width: 2.75rem;
-    height: 2.75rem;
+    position: static;
+    order: 3;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: var(--space-md);
   }
 
   .nav-links {
@@ -2021,6 +2020,9 @@ section {
 
 .contact-cta {
   margin-top: var(--space-2xl);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
 }
 
 /* ==========================================
