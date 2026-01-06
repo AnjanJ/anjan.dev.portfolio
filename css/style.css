@@ -419,6 +419,7 @@ select:focus-visible {
   border-radius: var(--radius-md);
   font-weight: 600;
   transition: all var(--transition-fast);
+  margin-right: var(--space-md);
 }
 
 .nav-resume:hover {
