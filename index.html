@@ -105,7 +105,7 @@
 
     <!-- Theme Toggle -->
     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-        <i>🌙</i>
+        <i aria-hidden="true">🌙</i>
     </button>
 
     <!-- Back to Top Button -->
@@ -134,7 +134,7 @@
                     <a href="#contact">Contact</a>
                     <a href="assets/Anjan_Jagirdar_Resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-resume">Resume</a>
                     <button class="nav-theme-toggle" id="nav-theme-toggle" aria-label="Toggle theme">
-                        <span class="theme-icon">☀️</span>
+                        <span class="theme-icon" aria-hidden="true">☀️</span>
                         <span class="theme-text">Switch to Light Mode</span>
                     </button>
                 </div>
@@ -142,9 +142,10 @@
         </div>
     </nav>
 
+    <main id="main-content">
+
     <!-- Hero Section -->
     <section id="hero" class="hero">
-        <a id="main-content"></a>
         <div class="container">
             <div class="hero-wrapper">
                 <div class="hero-content">
@@ -187,7 +188,7 @@
                 </div>
                 <div class="hero-image">
                     <div class="hero-image-wrapper">
-                        <img src="images/profile.jpeg" alt="Professional headshot of Anjan Jagirdar, Senior Software Engineer, taken at Instructure worldwide company meeting in January 2025" class="profile-photo" width="800" height="800">
+                        <img src="images/profile.jpeg" alt="Professional headshot of Anjan Jagirdar, Senior Software Engineer, taken at Instructure worldwide company meeting in January 2025" class="profile-photo" width="800" height="800" decoding="async" sizes="(max-width: 968px) 220px, 280px">
                         <div class="hero-image-border"></div>
                     </div>
                 </div>
@@ -246,21 +247,21 @@
 
                     <div class="about-values">
                         <div class="value-card">
-                            <div class="value-icon">💡</div>
+                            <div class="value-icon" aria-hidden="true">💡</div>
                             <div class="value-content">
                                 <h4>Build What Matters</h4>
                                 <p>Focus on solving real problems, not adding features nobody asked for</p>
                             </div>
                         </div>
                         <div class="value-card">
-                            <div class="value-icon">🔧</div>
+                            <div class="value-icon" aria-hidden="true">🔧</div>
                             <div class="value-content">
                                 <h4>Own Your Stack</h4>
                                 <p>Self-host when possible, eliminate vendor lock-in, stay independent</p>
                             </div>
                         </div>
                         <div class="value-card">
-                            <div class="value-icon">📝</div>
+                            <div class="value-icon" aria-hidden="true">📝</div>
                             <div class="value-content">
                                 <h4>Share Knowledge</h4>
                                 <p>Write, teach, open-source to make the next developer's job easier</p>
@@ -563,53 +564,53 @@
                 <div class="skill-category">
                     <h3 class="skill-category-title">Backend & APIs</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag skill-expert">Ruby on Rails</span>
-                        <span class="skill-tag skill-expert">Ruby</span>
-                        <span class="skill-tag skill-advanced">PostgreSQL</span>
-                        <span class="skill-tag skill-advanced">RESTful APIs</span>
-                        <span class="skill-tag skill-advanced">GraphQL</span>
-                        <span class="skill-tag skill-advanced">Sidekiq / Solid Queue</span>
-                        <span class="skill-tag skill-intermediate">Redis</span>
-                        <span class="skill-tag skill-intermediate">MySQL</span>
+                        <span class="skill-tag skill-expert">Ruby on Rails <span class="sr-only">(Expert)</span></span>
+                        <span class="skill-tag skill-expert">Ruby <span class="sr-only">(Expert)</span></span>
+                        <span class="skill-tag skill-advanced">PostgreSQL <span class="sr-only">(Advanced)</span></span>
+                        <span class="skill-tag skill-advanced">RESTful APIs <span class="sr-only">(Advanced)</span></span>
+                        <span class="skill-tag skill-advanced">GraphQL <span class="sr-only">(Advanced)</span></span>
+                        <span class="skill-tag skill-advanced">Sidekiq / Solid Queue <span class="sr-only">(Advanced)</span></span>
+                        <span class="skill-tag skill-intermediate">Redis <span class="sr-only">(Intermediate)</span></span>
+                        <span class="skill-tag skill-intermediate">MySQL <span class="sr-only">(Intermediate)</span></span>
                     </div>
                 </div>
 
                 <div class="skill-category">
                     <h3 class="skill-category-title">Frontend & Mobile</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag skill-advanced">Turbo / Hotwire</span>
-                        <span class="skill-tag skill-intermediate">React</span>
-                        <span class="skill-tag skill-intermediate">React Native</span>
-                        <span class="skill-tag skill-intermediate">Expo</span>
-                        <span class="skill-tag skill-intermediate">JavaScript / ES6+</span>
-                        <span class="skill-tag skill-intermediate">HTML5 / CSS3</span>
-                        <span class="skill-tag skill-intermediate">Bootstrap / Tailwind</span>
+                        <span class="skill-tag skill-advanced">Turbo / Hotwire <span class="sr-only">(Advanced)</span></span>
+                        <span class="skill-tag skill-intermediate">React <span class="sr-only">(Intermediate)</span></span>
+                        <span class="skill-tag skill-intermediate">React Native <span class="sr-only">(Intermediate)</span></span>
+                        <span class="skill-tag skill-intermediate">Expo <span class="sr-only">(Intermediate)</span></span>
+                        <span class="skill-tag skill-intermediate">JavaScript / ES6+ <span class="sr-only">(Intermediate)</span></span>
+                        <span class="skill-tag skill-intermediate">HTML5 / CSS3 <span class="sr-only">(Intermediate)</span></span>
+                        <span class="skill-tag skill-intermediate">Bootstrap / Tailwind <span class="sr-only">(Intermediate)</span></span>
                     </div>
                 </div>
 
                 <div class="skill-category">
                     <h3 class="skill-category-title">DevOps & Infrastructure</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag skill-advanced">Linux / Unix</span>
-                        <span class="skill-tag skill-advanced">Nginx</span>
-                        <span class="skill-tag skill-advanced">Git / GitHub</span>
-                        <span class="skill-tag skill-intermediate">Docker</span>
-                        <span class="skill-tag skill-intermediate">Cloudflare</span>
-                        <span class="skill-tag skill-intermediate">Railway / Render / Fly.io</span>
-                        <span class="skill-tag skill-intermediate">CI/CD Pipelines</span>
+                        <span class="skill-tag skill-advanced">Linux / Unix <span class="sr-only">(Advanced)</span></span>
+                        <span class="skill-tag skill-advanced">Nginx <span class="sr-only">(Advanced)</span></span>
+                        <span class="skill-tag skill-advanced">Git / GitHub <span class="sr-only">(Advanced)</span></span>
+                        <span class="skill-tag skill-intermediate">Docker <span class="sr-only">(Intermediate)</span></span>
+                        <span class="skill-tag skill-intermediate">Cloudflare <span class="sr-only">(Intermediate)</span></span>
+                        <span class="skill-tag skill-intermediate">Railway / Render / Fly.io <span class="sr-only">(Intermediate)</span></span>
+                        <span class="skill-tag skill-intermediate">CI/CD Pipelines <span class="sr-only">(Intermediate)</span></span>
                     </div>
                 </div>
 
                 <div class="skill-category">
                     <h3 class="skill-category-title">Architecture & Practices</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag skill-expert">CQRS Pattern</span>
-                        <span class="skill-tag skill-expert">Service Objects</span>
-                        <span class="skill-tag skill-expert">TDD / RSpec</span>
-                        <span class="skill-tag skill-advanced">API Design</span>
-                        <span class="skill-tag skill-advanced">Performance Optimization</span>
-                        <span class="skill-tag skill-advanced">Security Best Practices</span>
-                        <span class="skill-tag skill-intermediate">Microservices</span>
+                        <span class="skill-tag skill-expert">CQRS Pattern <span class="sr-only">(Expert)</span></span>
+                        <span class="skill-tag skill-expert">Service Objects <span class="sr-only">(Expert)</span></span>
+                        <span class="skill-tag skill-expert">TDD / RSpec <span class="sr-only">(Expert)</span></span>
+                        <span class="skill-tag skill-advanced">API Design <span class="sr-only">(Advanced)</span></span>
+                        <span class="skill-tag skill-advanced">Performance Optimization <span class="sr-only">(Advanced)</span></span>
+                        <span class="skill-tag skill-advanced">Security Best Practices <span class="sr-only">(Advanced)</span></span>
+                        <span class="skill-tag skill-intermediate">Microservices <span class="sr-only">(Intermediate)</span></span>
                     </div>
                 </div>
             </div>
@@ -852,6 +853,8 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -866,15 +869,15 @@
                 <div class="footer-links">
                     <div class="footer-column">
                         <h4 class="footer-title">Work</h4>
-                        <a href="https://www.linkedin.com/in/matrixcoder/" target="_blank">LinkedIn</a>
-                        <a href="https://github.com/AnjanJ" target="_blank">GitHub</a>
-                        <a href="https://medium.com/@anjanj" target="_blank">Medium Blog</a>
+                        <a href="https://www.linkedin.com/in/matrixcoder/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://github.com/AnjanJ" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://medium.com/@anjanj" target="_blank" rel="noopener noreferrer">Medium Blog</a>
                     </div>
                     <div class="footer-column">
                         <h4 class="footer-title">Projects</h4>
-                        <a href="https://rails-error-dashboard.anjan.dev" target="_blank">Rails Error Dashboard</a>
-                        <a href="https://www.audiointelli.com" target="_blank">Audio Intelli</a>
-                        <a href="https://rubygems.org/profiles/anjan__j" target="_blank">RubyGems Profile</a>
+                        <a href="https://rails-error-dashboard.anjan.dev" target="_blank" rel="noopener noreferrer">Rails Error Dashboard</a>
+                        <a href="https://www.audiointelli.com" target="_blank" rel="noopener noreferrer">Audio Intelli</a>
+                        <a href="https://rubygems.org/profiles/anjan__j" target="_blank" rel="noopener noreferrer">RubyGems Profile</a>
                     </div>
                 </div>
             </div>

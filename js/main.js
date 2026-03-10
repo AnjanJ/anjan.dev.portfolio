@@ -1,5 +1,12 @@
 // Main JavaScript functionality
 (function() {
+  // Aria-live region for announcing status changes to screen readers
+  const liveRegion = document.createElement('div');
+  liveRegion.setAttribute('aria-live', 'polite');
+  liveRegion.setAttribute('role', 'status');
+  liveRegion.className = 'sr-only';
+  document.body.appendChild(liveRegion);
+
   // Dynamic copyright year
   const copyrightYear = document.getElementById('copyright-year');
   if (copyrightYear) {
@@ -32,6 +39,15 @@
       if (!mobileMenuToggle.contains(e.target) && !navLinks.contains(e.target)) {
         mobileMenuToggle.setAttribute('aria-expanded', 'false');
         navLinks.classList.remove('active');
+      }
+    });
+
+    // Close mobile menu on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+        navLinks.classList.remove('active');
+        mobileMenuToggle.focus();
       }
     });
   }
@@ -79,17 +95,14 @@
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
+        entry.target.classList.add('js-visible');
       }
     });
   }, observerOptions);
 
-  // Observe sections for animation
+  // Observe sections for animation (class-based for progressive enhancement)
   document.querySelectorAll('section').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(20px)';
-    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    section.classList.add('js-animate');
     observer.observe(section);
   });
 
@@ -103,6 +116,7 @@
       if (navigator.clipboard) {
         e.preventDefault();
         navigator.clipboard.writeText(email).then(() => {
+          liveRegion.textContent = 'Email address copied to clipboard';
           if (valueElement) {
             const originalText = valueElement.textContent;
             valueElement.textContent = 'Copied!';
@@ -111,6 +125,7 @@
             setTimeout(() => {
               valueElement.textContent = originalText;
               valueElement.classList.remove('copied');
+              liveRegion.textContent = '';
             }, 2000);
           } else {
             const originalText = this.textContent;
@@ -120,6 +135,7 @@
             setTimeout(() => {
               this.textContent = originalText;
               this.classList.remove('copied');
+              liveRegion.textContent = '';
             }, 2000);
           }
         });
