@@ -1466,6 +1466,16 @@ section {
   box-shadow: var(--shadow-lg);
 }
 
+.project-card-featured {
+  grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+  .project-card-featured {
+    grid-column: span 1;
+  }
+}
+
 .project-card-placeholder {
   border-style: dashed;
 }

@@ -132,7 +132,7 @@ This philosophy drives all of Anjan's work and personal projects:
 - MIT licensed - free forever
 
 **Technical Highlights:**
-- ✅ **850+ RSpec tests** (comprehensive test coverage)
+- ✅ **2,600+ RSpec tests** (comprehensive test coverage)
 - ✅ **CQRS architecture** with service objects
 - ✅ **Fuzzy error matching** using Jaccard + Levenshtein algorithms
 - ✅ **Statistical baseline anomaly detection**
@@ -526,7 +526,7 @@ This philosophy drives all of Anjan's work and personal projects:
    - DevOps capable (Nginx, Cloudflare, systemd)
 
 4. **Production-Grade Quality**
-   - 850+ RSpec tests for open source project
+   - 2,600+ RSpec tests for open source project
    - CQRS architecture patterns
    - Real-time features (Turbo Streams)
    - Professional-level code, free for everyone
@@ -740,7 +740,7 @@ Anjan Jagirdar is a **Senior Software Engineer with 9+ years of Rails expertise*
 **Proven track record:**
 - Team Lead promotion at Ajackus
 - Value Champion Award winner
-- 850+ RSpec tests for open-source project
+- 2,600+ RSpec tests for open-source project
 - Rails 4→6→7 upgrades across multiple companies
 - International expansion (French Canadian i18n)
 - Developer tools that save QA hours
