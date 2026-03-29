@@ -161,8 +161,8 @@
                         <span class="text-gradient">Building scalable web applications</span>
                     </h1>
                     <p class="hero-subtitle">
-                        9+ years building production-grade Rails applications, open-source gems, and developer tools.
-                        I treat AI-assisted development as a multiplier, not a crutch.
+                        9+ years building production-grade Rails applications and developer tools that people actually use.
+                        I think in user problems first, then code solutions. AI-assisted development is a multiplier, not a crutch.
                     </p>
                     <div class="hero-cta">
                         <a href="#contact" class="btn btn-primary">Get in touch</a>
@@ -232,15 +232,22 @@
                     <div class="about-story">
                         <h3 class="about-heading">What Drives Me</h3>
                         <p>
-                            I believe developers should <strong>own their tools, not rent them</strong>. That is why I built
-                            <a href="https://rails-error-dashboard.anjan.dev" target="_blank" class="inline-link">Rails Error Dashboard</a>, a
-                            free, self-hosted alternative to expensive monitoring services. With 3,000+ RSpec tests, 12,000+ downloads, and 59
-                            releases, it is my answer to SaaS fatigue. Built with CQRS architecture and TracePoint-based error context capture.
+                            I believe developers should <strong>own their tools, not rent them</strong>. I kept hitting
+                            free-tier limits on error monitoring SaaS, watching the pricing jump the moment an app got real traffic.
+                            Then it hit me: why does a Rails app need a third party to tell it about its own errors? A gem living
+                            inside the app can go deeper — detecting silently rescued exceptions, capturing instance variables,
+                            snapshotting GC stats, YJIT metrics, and connection pool health at the moment of failure. So I built
+                            <a href="https://rails-error-dashboard.anjan.dev" target="_blank" class="inline-link">Rails Error Dashboard</a>.
+                            12,000+ downloads and 59 releases later, each feature exists because a real user needed it, not because
+                            a roadmap said so.
                         </p>
                         <p>
-                            I also built <strong>ShipKit</strong>, a Claude Code plugin with 15 skills, 2 diagnostic agents, and automatic stack
-                            detection for 6 frameworks. And my <strong>dotfiles</strong> system provisions a complete macOS dev environment with
-                            one command, including unified theming across 17 apps and 170+ shell tests.
+                            I applied the same approach to <strong>BodhiKit</strong>, a coding tutor plugin. Instead of jumping straight to
+                            code, I studied the research — Bloom, Vygotsky, Oakley, Ericsson — then designed a system where the AI teaches
+                            you to code rather than writing code for you. Every design decision maps to proven learning science.
+                            <strong>ShipKit</strong> came from watching developers spend more time configuring AI tools than using them, so
+                            I built zero-config stack detection for 6 frameworks. And my <strong>dotfiles</strong> system exists because
+                            setting up a new Mac should take minutes, not days — one command, 325 packages, 17 apps themed consistently.
                         </p>
                     </div>
 
@@ -259,14 +266,14 @@
                             <div class="value-icon" aria-hidden="true">💡</div>
                             <div class="value-content">
                                 <h4>Build What Matters</h4>
-                                <p>Focus on solving real problems, not adding features nobody asked for</p>
+                                <p>Start with the user's problem, not the technology. Ship what people need, cut what they don't</p>
                             </div>
                         </div>
                         <div class="value-card">
                             <div class="value-icon" aria-hidden="true">🔧</div>
                             <div class="value-content">
                                 <h4>Own Your Stack</h4>
-                                <p>Self-host when possible, eliminate vendor lock-in, stay independent</p>
+                                <p>Give users control over their data and tools. No vendor lock-in, no surprise pricing</p>
                             </div>
                         </div>
                         <div class="value-card">
@@ -424,9 +431,12 @@
                         <h3 class="project-title">Rails Error Dashboard</h3>
                         <span class="project-status status-active">Open Source</span>
                     </div>
+
                     <p class="project-description">
-                        Self-hosted error monitoring for Rails applications. CQRS architecture with 17 commands and 13 queries.
-                        TracePoint-based error context capture. 3,000+ specs, 59 releases. MIT licensed.
+                        Why should a Rails app depend on a third party to understand its own errors? A gem running inside
+                        the app can go deeper — detecting silently rescued exceptions no other tool catches, capturing instance
+                        variables, snapshotting runtime health at the moment of failure. Free forever, self-hosted, no free-tier
+                        limits. 12,000+ downloads across 59 releases, shaped by community feedback.
                     </p>
                     <div class="project-features">
                         <div class="feature-item">✓ TracePoint-based local &amp; instance variable capture at crash site</div>
@@ -436,7 +446,7 @@
                         <div class="feature-item">✓ Copy for LLM — one-click error context export for AI debugging</div>
                         <div class="feature-item">✓ Release tracking with stability indicators and regression detection</div>
                         <div class="feature-item">✓ Multi-channel notifications (Slack, Discord, PagerDuty, Email, Webhooks)</div>
-                        <div class="feature-item">✓ Deep runtime diagnostics — GC stats, YJIT metrics, memory, connection pool health</div>
+                        <div class="feature-item">✓ System health snapshot at crash time — GC state, YJIT stats, memory, DB pool, file descriptors, TCP connections (sub-ms, zero overhead when off)</div>
                     </div>
                     <div class="project-tech">
                         <span class="tech-tag">Ruby on Rails</span>
@@ -497,10 +507,11 @@
                         <span class="project-status status-active">Active</span>
                     </div>
                     <p class="project-description">
-                        A deeply personalized, research-backed coding tutor plugin for Claude Code. Assesses each
-                        learner's unique skill level, builds a custom learning plan, adapts exercises to their
-                        Zone of Proximal Development, and tracks progress across sessions with spaced repetition.
-                        The learner writes code, BodhiKit asks questions. No two learning journeys are the same.
+                        Most AI coding tools write code for you — which means you never actually learn. BodhiKit
+                        flips that: the learner writes code, the AI teaches. I studied the research (Bloom, Vygotsky,
+                        Oakley, Ericsson) before writing a single line, then designed every feature around proven
+                        learning science. It assesses your skill level, adapts to your pace, and tracks progress
+                        across sessions. No two learning journeys are the same.
                     </p>
                     <div class="project-features">
                         <div class="feature-item">✓ 17 skills, 3 AI agents, 3 knowledge bases</div>
@@ -538,8 +549,10 @@
                         <span class="project-status status-active">Active</span>
                     </div>
                     <p class="project-description">
-                        Claude Code plugin for AI-assisted development. 15 skills, 2 diagnostic agents,
-                        2 knowledge bases, and automatic stack detection for Rails, React, Python, Go, Elixir, and static sites.
+                        Developers were spending more time configuring AI coding tools than using them. ShipKit
+                        solves that — drop it into any project and it auto-detects your stack, loads the right rules,
+                        and gives you 15 purpose-built skills. Works out of the box for Rails, React, Python, Go,
+                        Elixir, and static sites.
                     </p>
                     <div class="project-features">
                         <div class="feature-item">✓ 15 specialized skills (QA, code review, onboarding, testing)</div>
@@ -576,8 +589,10 @@
                         <span class="project-status status-active">Active</span>
                     </div>
                     <p class="project-description">
-                        One-command macOS development environment. Unified theming across 17 apps, 325 Homebrew packages,
-                        work/personal identity management, and idempotent setup that is safe to run repeatedly.
+                        Setting up a new Mac for development takes most people a full day. This does it in minutes —
+                        one command installs 325 packages, themes 17 apps consistently, and separates work/personal
+                        identity. Fully idempotent, so running it twice changes nothing. Designed for the experience
+                        of "it just works."
                     </p>
                     <div class="project-features">
                         <div class="feature-item">✓ 3 themes applied across 17 apps simultaneously</div>
