@@ -1,0 +1,122 @@
+# anjan-dev-portfolio
+
+## Project Info
+
+- **Stack:** static
+- **Language:** HTML/CSS/JS
+- **Test framework:** none
+- **Test command:** `{{TEST_COMMAND}}`
+- **Lint command:** `{{LINT_COMMAND}}`
+- **Build command:** `{{BUILD_COMMAND}}`
+
+### Key Paths
+
+| Path | Purpose |
+|------|---------|
+| {{KEY_PATH_1}} | {{KEY_PATH_1_DESC}} |
+| {{KEY_PATH_2}} | {{KEY_PATH_2_DESC}} |
+| {{KEY_PATH_3}} | {{KEY_PATH_3_DESC}} |
+
+---
+
+## Workflow Rules
+
+### 1. Plan Mode Default
+Enter plan mode for any task requiring 3+ steps. Spend 80% of effort in planning.
+For simple fixes (typo, one-line change), skip planning and just do it.
+
+### 2. Subagent Strategy
+Use subagents only for atomic, well-defined tasks (search, test run, file analysis).
+Keep all reasoning and decision-making in the main session — never split thinking across agents.
+
+### 3. Self-Improvement Loop
+When the user corrects you, update CLAUDE.md or `.claude/lessons.md` with the lesson.
+Don't repeat the same mistake twice. Check lessons before starting work.
+
+### 4. Verification Before Done
+Never say "done" without proving it works:
+- Code change → run tests
+- Bug fix → reproduce before/after
+- New feature → run the feature + related tests
+- Refactor → full test suite passes
+
+### 5. Demand Elegance (Balanced)
+For non-trivial changes: pause, review, ask "is there a simpler way?"
+For obvious fixes: just do it, don't overthink.
+
+### 6. Autonomous Bug Fixing
+When tests fail, read the error, read the source, fix the root cause.
+Don't ask the user what to do — investigate and fix. Only ask if genuinely stuck.
+
+### 7. Task Management
+Plan → verify plan → track progress → explain decisions → document outcomes.
+For multi-step work, use todo lists to track what's done and what's next.
+
+### 8. Core Principles
+- Simplicity first — the right amount of complexity is the minimum needed
+- No laziness — never skip tests, never leave TODOs, never stub implementations
+- Minimal impact — change only what's necessary, don't refactor neighbors
+
+---
+
+## Session Discipline
+
+- **Interrupt early** — if the approach isn't working after 2-3 attempts, stop and reconsider. Escape, don't hope.
+- **Clear between features** — use `/clear` when switching to a new feature. One feature per context window.
+- **Multiple instances** — use parallel Claude sessions for independent work (plan + build + debug).
+- **Never manually edit rules** — use `/update-rules` to modify this file. Keeps formatting consistent.
+- **Check context** — run `/context-audit` periodically to find bloated files consuming context.
+
+---
+
+## Conventions
+
+### Commits
+- Never add a co-author signature (e.g., `Co-Authored-By`) unless explicitly told to
+- Small, atomic commits — one logical change per commit, so PR review stays manageable
+- Imperative mood, explain the "why" not the "what" (e.g., "Fix race condition in checkout" not "Fixed stuff")
+- Ask the user if a ticket/issue reference is required (e.g., `JIRA-123:`, `Fixes #123`) if you don't already know
+- Include a brief test plan in the commit body for non-trivial changes
+- Never amend or squash published commits without asking
+- Stage specific files — never `git add .` or `git add -A`
+
+### Destructive Operations — ALWAYS Ask First
+These actions require explicit user confirmation every time. Never proceed autonomously:
+- **Database:** dropping tables, removing columns, changing column types, deleting migrations
+- **Schema:** any migration that destroys data (remove_column, drop_table, change with data loss)
+- **Schema changes:** present a rollback strategy before executing (e.g., add new → migrate data → remove old)
+- **Files:** deleting files, `rm -rf`, overwriting uncommitted changes
+- **Secrets:** never stage or commit `.env`, credentials, private keys, or API tokens
+- **Git:** force push, reset --hard, amending published commits, deleting branches
+- **Dependencies:** never upgrade a major version (e.g., Rails 7→8, React 18→19) without asking
+- **External APIs:** warn before making calls that could cost money or hit rate limits
+
+### General
+- **Files:** prefer editing existing files over creating new ones
+- **Tests:** always run tests after changes — never skip, never `--no-verify`
+{{TEAM_CONVENTIONS}}
+
+
+## Static Site
+
+### Structure
+
+| Path | Purpose |
+|------|---------|
+| `index.html` | Main page |
+| `css/` or `styles/` | Stylesheets |
+| `js/` or `scripts/` | JavaScript |
+| `images/` or `assets/` | Static assets |
+| `pages/` | Additional HTML pages |
+
+### Build
+- **Bundler:** {{BUNDLER}} <!-- None / Vite / Webpack / Parcel -->
+- **Dev server:** {{DEV_SERVER}} <!-- None / npx serve / vite dev -->
+
+### Conventions
+- **HTML:** Semantic elements (`header`, `nav`, `main`, `article`, `footer`)
+- **CSS:** Mobile-first, use CSS custom properties for theming
+- **JS:** Vanilla JS preferred — no framework unless complexity demands it
+- **Images:** Optimized (WebP where supported), lazy-loaded below the fold
+- **Accessibility:** All images have `alt` text, all forms have labels, keyboard navigable
+- **SEO:** Meta description, Open Graph tags, JSON-LD structured data, sitemap.xml
